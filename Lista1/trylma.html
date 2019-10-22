@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Trylma</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://kit.fontawesome.com/d38ec04bf6.js" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device−width , initial−scale=1.0"/>
+</head>
+<body>
+  <nav>
+      <a class="nav_item" href="/webpage-project/home.html">Home</a>
+      <a class="nav_item" href="/webpage-project/interests.html">Zainteresowania</a>
+      <a class="nav_item" href="/webpage-project/study.html">Projekty</a>
+  </nav>
+  <main>
+    <h1>Trylma/Chińskie warcaby</h1>
+    <p class="description">Implementacja popularnej gry "chińskie warcaby". Użytkownik może
+      grać w grę z botami lub z innymi użytkownikami poprzez połączenie się
+      do prostego serwera.<br>Użytkownik może tworzyć grę lub dołączyć do obecnie
+      trwającej gry, w momencie, gdy rozgrywka jeszcze się nie rozpoczęła.<br>Po
+      uruchomieniu programu pokazuje się menu, w którym można wybrać ilu graczy ludzi
+      oraz ile botów będzie brało udział w rozgrywce.  </p>
+      <section class="photos">
+        <img src="trylma/trylma1.png" width="350" alt="trylma1"/>
+        <img src="trylma/trylma4.png" width="350" alt="trylma2"/>
+      </section>
+      <section class="source_code">
+          <h3>Najciekawszy fragment kodu odpowiadający za przyłączanie graczy do gry</h3>
+          <pre>
+        <code>
+    public void runGameServer(int noPlayers,int noBots){
+         stillInGame = false;
+         GameServer game = new GameServer(this, noBots, noPlayers);
+         try {
+             if(serverSocket == null)
+                  serverSocket = new ServerSocket(myPort);
+             System.out.println("Start server.");
+         } catch (IOException ex) {
+             System.out.println(ex.toString());
+             System.exit(-1);
+         }
+         for(int i = 1; i <= noPlayers; i++){
+             try {
+                 PlayerInstance player = new HumanPlayer(game, i, serverSocket.accept());
+                 game.addPlayer(player);
+                 player.start();
+                 System.out.println(i);
+             } catch (IOException e) {
+                 e.printStackTrace();
+                 continue;
+             }
+         }
+     }
+ </code>
+</pre>
+        <p>Cały kod źródłowy dostępny: <a href="https://github.com/elizazawisza/TP_Projekt">tu</a></p>
+      </section>
+  </main>
+  <footer>
+    Strona realizowana w ramach przedmiotu Nowoczesne Technologie WWW
+  </footer>
+  </body>
+</html>

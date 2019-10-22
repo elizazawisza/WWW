@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+html,body{
+	font-family: Helvetica, Times, Arial, sans-serif;
+  height:100%;
+}
+body{
+  display:flex;
+  flex-direction:column;
+	background: linear-gradient(to right, #746CFF, #91EFF0);
+	padding: 0;
+	margin: 0;
+}
+.main_content{
+  display: flex;
+}
+.photo, .description, .source_code{
+  margin: 1.5rem;
+}
+img {
+    image-orientation: from-image;
+    max-width: 100%;
+    display:block;
+    height: auto;
+}
+.nav_item{
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+}
+nav{
+    text-align: right;
+    margin-right: 8rem;
+    margin-top: 2rem;
+}
+footer{
+  margin-top:auto;
+	margin-bottom: 0.8rem;
+	text-align: center;
+	color: white;
+}
+i{
+  margin-right: 1rem;
+}
+h1{
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid #d3d3d3;
+}
+main{
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  margin: 5rem 8rem;
+}
+
+.item{
+  width: 33%;
+}
+
+.full_width_item{
+  margin: 1.5rem;
+  display: flex;
+}
+.item h3{
+  text-align: center;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.item_description img{
+  width: 70%;
+}
+.projects {
+  display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.section_title{
+  text-align: center;
+}
+
+.center_mobile {
+  display: block;
+  margin: 1rem;
+  min-width:150px;
+}
+
+.interests{
+  margin-bottom: 5rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: #2196F3;
+  padding: 10px;
+}
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+.photo.project{
+	height: 10rem;
+}
+
+.photos{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+.photos img{
+	margin: 0.5rem;
+}
+pre {
+    overflow-x: auto;
+}
+pre code {
+    overflow-wrap: normal;
+    white-space: pre;
+}
+@media screen and (max-width: 800px) {
+  html,body{
+    width: 100%;
+		box-sizing: border-box;
+  }
+	main{
+	  background: white;
+	  border-radius: 15px;
+		margin: 0.5rem;
+		padding: 0;
+	}
+	.main_content{
+		display: block;
+	}
+  .full_width_item{
+    display: block;
+		margin: 1.5rem 0.5rem;
+  }
+	.photo{
+		display: flex;
+  align-items: center;
+  justify-content: center;
+	}
+	nav{
+		text-align: center;
+		margin: 2rem 0;
+		display: contents;
+		font-size: 1.2rem;
+	}
+	h1 {
+		text-align: center;
+	}
+	.item{
+		width: 100%;
+	}
+	.photo.project{
+		height: 15rem;
+	}
+}
+
+@media screen and (max-width: 1400px) and (min-width: 800px) {
+	.item{
+		width: 50%;
+	}
+	.photo.project{
+		height: 10rem;
+	}
+}

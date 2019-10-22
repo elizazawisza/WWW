@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Aplikacja</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://kit.fontawesome.com/d38ec04bf6.js" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device−width , initial−scale=1.0"/>
+</head>
+<body>
+  <nav>
+      <a class="nav_item" href="/webpage-project/home.html">Home</a>
+      <a class="nav_item" href="/webpage-project/interests.html">Zainteresowania</a>
+      <a class="nav_item" href="/webpage-project/study.html">Projekty</a>
+  </nav>
+  <main>
+    <h1>Aplikacja domówka</h1>
+    <p>Aplikacja pomagająca użytkownikowi organizować imprezę. Użytkownik może
+      wybrać, datę, godzinę, miejsce oraz tematykę imprezy i czas trwania.
+      Zaprasza znajomych, przygotowuje listę pytań, które mają mu ułatwić organizację.
+      Organizator może przygotować listę zakupów, listę dań. Apikacja umożliwia
+      użytkownikowi podzielenie kwoty zakupów na poszczególnych użytkoników
+      imprezy, zgodnie z ich preferencjami spożywczymi. </p>
+      <section class="photos">
+           <img src="app/app1.png" width="250" alt="app1"/>
+           <img src="app/app2.png" width="250" alt="app2"/>
+           <img src="app/app3.png" width="250" alt="app3"/>
+         </section>
+         <section class="source_code">
+             <h3>Najciekawszy fragment kodu odpowiadający za obsługę drawer menu</h3>
+             <pre>
+           <code>
+  override fun onNavigationItemSelected(item: MenuItem): Boolean {
+      when (item.itemId) {
+          R.id.nav_parties -> {
+              supportFragmentManager.beginTransaction().replace(
+                  R.id.fragment_container,
+                  PartyFragment()
+              ).commit()
+          }
+          R.id.nav_friends -> {
+              supportFragmentManager.beginTransaction().replace(
+                  R.id.fragment_container,
+                  FriendsFragment()
+              ).commit()
+          }
+          R.id.nav_notifications -> {
+              supportFragmentManager.beginTransaction().replace(
+                  R.id.fragment_container,
+                  NotificationsFragment()
+              ).commit()
+          }
+          R.id.nav_settings -> {
+              supportFragmentManager.beginTransaction().replace(
+                  R.id.fragment_container,
+                  ProfileFragment()
+              ).commit()
+          }
+          R.id.nav_logout -> {
+              val myintent = Intent()
+              setResult(Activity.RESULT_OK, myintent)
+              finish()
+          }
+      }
+
+
+      val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
+      drawerLayout.closeDrawer(GravityCompat.START)
+      return true
+  }
+
+    </code>
+   </pre>
+           <p>Cały kod źródłowy dostępny: <a href="https://gitlab.com/pepeciaki/mobile-project">tu</a></p>
+         </section>
+  </main>
+  <footer>
+    Strona realizowana w ramach przedmiotu Nowoczesne Technologie WWW
+  </footer>
+  </body>
+</html>

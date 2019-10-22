@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Paint</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+<script src="https://kit.fontawesome.com/d38ec04bf6.js" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device−width , initial−scale=1.0"/>
+</head>
+<body>
+  <nav>
+      <a class="nav_item" href="/webpage-project/home.html">Home</a>
+      <a class="nav_item" href="/webpage-project/interests.html">Zainteresowania</a>
+      <a class="nav_item" href="/webpage-project/study.html">Projekty</a>
+  </nav>
+  <main>
+    <h1>Paint</h1>
+    <p class="description">Program służący do rysowania prostych figur geometryczych: okrąg,
+      wielokąt, prostokąt. Użytkownik ma możliwość zmiany położenia, rozmiaru
+      oraz koloru narysowanych figur. Ponadto można zapisywać narysowany obrazek
+      do plku oraz odtworzyć obraz z pliku w programie w celu jego ponownej edycji.
+      Użytkownik wybiera jeden z 3 dostępnych kształtów do rysowania(Okrąg, Wielokąt,
+      Prostokąt). Figury rysuje poprzez przeciągnięcie kursora myszki po oknie
+      służącym do rysowania lub w przypadku wielokąta poprzez klikanie w miejsca,
+      w których chce, by były wierzchołki figury, a rysowanie kończy kilkając
+      dwukrotnie w wybrany przez siebie punkt na ekranie.</p>
+      <section class="photos">
+           <img src="paint/paint1.png" width="350" alt="paint1"/>
+           <img src="paint/paint2.png" width="350" alt="paint2"/>
+         </section>
+         <section class="source_code">
+             <h3>Najciekawszy fragment kodu odpowiadający za rysowanie figur na panelu</h3>
+             <pre>
+           <code>
+               public void paint(Graphics g){
+                       super.paintComponents(g);
+                       Graphics2D g2 = (Graphics2D)g;
+                       for(int i=0; i < shapes.size(); i++){
+                           Shape s = shapes.get(i);
+                           g2.setPaint(colors.get(i));
+                           g2.fill(s);
+                       }
+                   }
+    </code>
+   </pre>
+           <p>Cały kod źródłowy dostępny: <a href="https://github.com/elizazawisza/Paint">tu</a></p>
+         </section>
+  </main>
+  <footer>
+    Strona realizowana w ramach przedmiotu Nowoczesne Technologie WWW
+  </footer>
+  </body>
+</html>
