@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+    <title>Sliding Tile Puzzle</title>
+</head>
+
+<body>
+
+<div style="display:none;">
+    <img id="puzzleImage">
+</div>
+
+<div id="mainContainer">
+
+
+    <div id="graphicArea">
+        <canvas id="gameCanvas" width="512" height="512"
+                style="border:1px solid #000000;">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+        <canvas id="gameCanvasMobile" width="350" height="350"
+                style="border:1px solid #000000;">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+    </div>
+    <div id="infoArea">
+
+        <h1>Sliding Tile Puzzle</h1>
+        <p class="control">
+            <label>Choose size of puzzle  </label> <input type="number" id="sliderSelectSize" name="points"
+                                                          min="3" max="8" value="4">
+            <br>
+            <span id="puzzleSize"></span>
+        </p>
+        <span>
+            Click "New Game" to start your game.
+        </span>
+        <p class="control">
+            <input type="button" class="button" id="buttonNewGame" value="New Game">
+        </p>
+
+        <div id="photoGallery">
+            <button class="img_button">
+                <img src="img/compressed_xmas1.jpg" width="50" height="50"/>
+            </button>
+            <button class="img_button">
+                <img src="img/compressed_xmas2.jpg" width="50" height="50"/>
+            </button>
+            <button class="img_button">
+                <img src="img/compressed_xmas3.jpg" width="50" height="50"/>
+            </button>
+            <button class="img_button">
+                <img src="img/compressed_xmas4.jpg" width="50" height="50"/>
+            </button>
+            <button class="img_button">
+                <img src="img/compressed_xmas5.jpg" width="50" height="50"/>
+            </button>
+            <button class="img_button">
+                <img src="img/compressed_xmas6.jpg" width="50" height="50"/>
+            </button>
+            <button class="img_button">
+                <img src="img/compressed_xmas7.jpg" width="50" height="50"/>
+            </button>
+            <button class="img_button">
+                <img src="img/compressed_xmas8.jpg" width="50" height="50"/>
+            </button>
+            <button class="img_button">
+                <img src="img/compressed_xmas9.jpg" width="50" height="50"/>
+            </button>
+            <button class="img_button">
+                <img src="img/compressed_xmas10.jpg" width="50" height="50"/>
+            </button>
+            <button class="img_button">
+                <img src="img/compressed_xmas11.jpg" width="50" height="50"/>
+            </button>
+            <button class="img_button">
+                <img src="img/compressed_xmas12.jpg" width="50" height="50"/>
+            </button>
+
+
+        </div>
+
+    </div>
+
+</div>
+<script src="puzzleScript.js"></script>
+</body>
+</html>

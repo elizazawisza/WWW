@@ -1,0 +1,35 @@
+.main_page_article{
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+}
+.title{
+    text-align: center;
+    margin-bottom: 7rem;
+}
+*{
+    background: beige;
+}
+.main_article{
+    border: 1px solid;
+    padding: 20px;
+    box-shadow: 5px 10px 18px #888888;
+    border-radius: 10px;
+}
+hr {
+    border: none;
+    border-top: 3px double #333;
+    color: #333;
+    overflow: visible;
+    text-align: center;
+    height: 5px;
+}
+
+hr:after {
+    background: beige;
+    content: '§§§';
+    padding: 0 4px;
+    position: relative;
+    top: -13px;
+}
+

@@ -1,0 +1,126 @@
+h1 {
+    font: bold 28px Helvetica, sans-serif;
+    text-align: center;
+}
+
+.footer {
+    text-align: left;
+    font: 12px Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+.control {
+    text-align: center;
+}
+
+.button {
+    background-color: #2F4F4F;
+    border: none;
+    color: white;
+    padding: 4px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+#mainContainer {
+    margin: auto;
+    width: 920px;
+}
+
+#infoArea {
+    font: 14px Helvetica, sans-serif;
+    font-weight: normal;
+    color: black;
+    text-align: center;
+    padding: 10px;
+    display: table-cell;
+    vertical-align: top;
+    border: 1px solid;
+}
+
+#graphicArea {
+    display: table-cell;
+    vertical-align: top;
+    padding: 8px;
+    display: table-cell;
+    vertical-align: top;
+    border: 1px solid;
+}
+
+#photoGallery {
+    font: 14px Helvetica, sans-serif;
+    font-weight: normal;
+    color: black;
+    text-align: justify;
+    padding: 10px;
+    vertical-align: top;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img_button {
+    margin: 10px;
+}
+#gameCanvasMobile{
+    display: none;
+}
+
+@media screen and (max-width: 600px) and (orientation: portrait){
+    #mainContainer, #photoGallery {
+        margin: auto;
+        width: 100%;
+        border: none;
+    }
+
+    #infoArea {
+        display: block;
+        border: none;
+        width:120%;
+        font: 24px Helvetica, sans-serif;
+    }
+    .img_button, .button{
+        -webkit-appearance: none;
+    }
+    #gameCanvas{
+        display: none;
+    }
+    #gameCanvasMobile{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape){
+    #mainContainer, #photoGallery {
+        margin: auto;
+        width: 100%;
+        border: none;
+    }
+    #mainContainer{
+        display: flex;
+        max-height: 400px;
+    }
+    #graphicArea{
+        border: none;
+    }
+
+    #infoArea {
+        display: block;
+        border: none;
+        width:120%;
+        font: 20px Helvetica, sans-serif;
+        overflow: auto;
+    }
+    .img_button, .button{
+        -webkit-appearance: none;
+    }
+    #gameCanvas{
+        display: none;
+    }
+    #gameCanvasMobile{
+        display: block;
+    }
+}
